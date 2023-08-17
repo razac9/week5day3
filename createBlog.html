@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- @NOTE linking our CSS -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- @NOTE initializing firebase -->
+    <script defer src="init-firebase.js"></script>
+
+    <!-- @NOTE link our main.js AFTER we load initialize firebase -->
+    <script defer src="mainCB.js"></script>
+    <title>NYC Blogs</title>
+</head>
+<body>
+    <nav id = "navbar">
+        <h1>NYC Blogs</h1>
+        <a href = "index.html">View Posts</a>
+    </nav>
+    <main>
+        <div id = "mainBox">
+            <h2 id = "introText">Share Your Voice With New York</h2>
+            <div id = "provideBox">
+                    <form>
+                        <div class="input-container">
+                            <label>Username:</label>
+                            <input type="text" id="username">
+                        </div>
+
+                        <div class="input-container">
+                            <label>Title:</label>
+                            <input type = "text" id = "title">
+
+                        </div>
+                        
+                        <div class="input-container">
+                            <label>Content:</label>
+                            <input type="text" id="content">
+                        </div>
+                    </form>
+                    <div id = "btn">
+                        <button id="send-btn"><strong>Send</strong></button>
+                    </div>
+        
+            </div>
+    
+</body>
+</html>
